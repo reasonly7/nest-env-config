@@ -10,9 +10,9 @@ import * as path from 'path';
       isGlobal: true,
       cache: true,
       envFilePath: [
-        path.resolve(__dirname, '../config/.env.development.local'),
-        path.resolve(__dirname, '../config/.env.development'),
-        path.resolve(__dirname, '../config/.env'),
+        path.resolve(__dirname, `../config/.env.${process.env.NODE_ENV}.local`),
+        path.resolve(__dirname, `../config/.env.${process.env.NODE_ENV}`),
+        path.resolve(__dirname, `../config/.env`),
       ],
     }),
   ],
