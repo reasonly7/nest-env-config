@@ -5,8 +5,8 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/print-config')
+  @Get('/get-app-port')
   printConfig() {
-    return this.appService.printConfig();
+    return this.appService.getAppPort();
   }
 }
